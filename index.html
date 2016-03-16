@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mustache Example</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+
+  </div>
+
+
+
+  <script id="hereTemplate" type="text">
+    <h1>{{name}} was here.</h1>
+    <ul>
+      {{#students}}
+        <li class="blue">First name: {{fname}}, Last name: {{lname}}</li>
+      {{/students}}
+    </ul>
+    {{#favoriteMovie}}Favorite Movie: {{favoriteMovie}}{{/favoriteMovie}}
+    {{^favoriteMovie}}No favorite Movie listed{{/favoriteMovie}}
+    {{car.type}}
+  </script>
+
+  <script src="https://code.jquery.com/jquery-1.12.1.min.js"   integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I="   crossorigin="anonymous"></script>
+  <script src="js/mustache.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
